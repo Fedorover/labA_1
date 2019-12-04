@@ -14,11 +14,17 @@
 
 class Submarine : public Ship {
 public:
-    int width;
-    int underwaterTime;
-    string armour;
+    int width;//ширина
+    int underwaterTime;//время под водой
+    string armour;//вооружение
     
-    void write(ostream &fo) override;
+    Submarine();//конструктор
+    
+    Submarine(const Submarine& src);//конструктор копирования
+    
+   ~ Submarine();
+    
+    void write(ostream &fo) override;//объявляем виртуальную функцию из базового класса
     
     Submarine(int length, int peoples, int speed, int width, int underwaterTime, string &armour);
     

@@ -21,15 +21,15 @@ int Keeper::getSize() const {
     return size;
 }
 
-Keeper &Keeper::add(Ship &ship) {
+Keeper &Keeper::add(Ship &ship) {//перезаписываем то что мы ввели с клавиатуры в нашу базу данных
     this->size++;
-    Ship **copy = new Ship*[this->size - 1];
+    Ship **copy = new Ship*[this->size - 1];//выделяется динамическая память под объект
     for (int i = 0; i < this->size - 1; ++i) {
         copy[i] = this->data[i];
     }
     this->data = new Ship*[this->size];
     for (int j = 0; j < this->size - 1; ++j) {
-        this->data[j] = copy[j];
+        this->data[j] = copy[j];//перезаписываем то что мы ввели с клавиатуры вч нашу базу данных
     }
     this->data[size - 1] = &ship;
     return *this;
