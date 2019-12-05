@@ -24,7 +24,7 @@ public:
     int getSize() const;//получение разменра массива
     Keeper &add(Ship &ship);//добавление производных обьектов абстрактного класса ship
     Keeper &remove(int index);// удаление производных обьектов абстрактного класса ship
-    Keeper &print();//функция печати на экран( из файла)
+    Keeper &print();//функция вся печать на экран
     void write(string filename);//функция печати в файл(сохр в файл)
     
     Keeper();
